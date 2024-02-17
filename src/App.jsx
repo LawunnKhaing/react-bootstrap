@@ -1,27 +1,9 @@
-// import React from 'react';
-// import Navigation from './Navbar';
-// import Home from './Home';
-// import Blogs from './Blogs';
-// import Contact from './Contact';
-
-// function App() {
-//   return (
-//     <div>
-//       <Navigation />
-//       <Home />
-//       {/* <Blogs /> */}
-//       {/* <Contact /> */}
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React, { useState } from 'react';
 import Navigation from './Navbar';
 import Home from './Home';
 import Blogs from './Blogs';
 import Contact from './Contact';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [activePage, setActivePage] = useState('home');
@@ -33,11 +15,13 @@ function App() {
   return (
     <div>
       <Navigation onPageChange={handlePageChange} />
-      {activePage === 'Home' && <Home />}
-      {activePage === 'Blogs' && <Blogs />}
-      {activePage === 'Contact' && <Contact />}
+      {activePage === 'home' && <Home />}
+      {activePage === 'blogs' && <Blogs />}
+      {activePage === 'contact' && <Contact />}
     </div>
   );
 }
 
 export default App;
+
+

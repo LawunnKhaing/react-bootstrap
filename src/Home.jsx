@@ -11,15 +11,15 @@ function Home() {
   };
 
   return (
-    <div id="home">
-      <Card>
+    <div id="home" className="container mt-5">
+      <Card className="shadow-sm">
         <Card.Body>
-          <Card.Title>Welcome</Card.Title>
-          <Card.Text>
+          <Card.Title className="h4 mb-4">Welcome</Card.Title>
+          <Card.Text className="mb-4">
             This is the homepage of our website. Explore other sections using the navigation above.
           </Card.Text>
           <Form>
-            <Form.Group controlId="formBasicEmail">
+            <Form.Group controlId="formBasicEmail" className="mb-3">
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
@@ -27,12 +27,19 @@ function Home() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
             </Form.Group>
             <Button variant="primary" onClick={handleSubscribe}>
               Subscribe
             </Button>
           </Form>
-          {showSuccess && <Alert variant="success">Successfully subscribed with email {email}</Alert>}
+          {showSuccess && (
+            <Alert variant="success" className="mt-3">
+              Successfully subscribed with email {email}
+            </Alert>
+          )}
         </Card.Body>
       </Card>
     </div>
