@@ -7,7 +7,7 @@ const Blogs = () => {
       <h1>Blog Articles</h1>
       <p>Find the latest articles and blog posts here.</p>
 
-      <Accordion>
+      {/* <Accordion>
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
@@ -18,7 +18,7 @@ const Blogs = () => {
             <Card.Body>Content for the first blog article.</Card.Body>
           </Accordion.Collapse>
         </Card>
-      </Accordion>
+      </Accordion> */}
     </div>
   );
 };
