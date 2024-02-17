@@ -15,6 +15,7 @@ function Home() {
       <Card className="shadow-sm">
         <Card.Body>
           <Card.Title className="h4 mb-4">Welcome</Card.Title>
+          <Card.Subtitle className="mb-3 text-muted">Home Page</Card.Subtitle>
           <Card.Text className="mb-4">
             This is the homepage of our website. Explore other sections using the navigation above.
           </Card.Text>
